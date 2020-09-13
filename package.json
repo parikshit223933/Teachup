@@ -1,0 +1,16 @@
+{
+  "name": "teachup",
+  "version": "1.0.0",
+  "description": "Online video conferencing app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "Parikshit Singh",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
+}
