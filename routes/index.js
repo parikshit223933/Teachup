@@ -1,7 +1,10 @@
-const express=require('express');
-const router=express.Router();
-const HomeController=new (require('../controllers/HomeController'))();
+const express = require('express');
+const router = express.Router();
+const menu = require('./menu');
 
-router.get('/', HomeController.homePage)
+const HomeController = new (require('../controllers/HomeController'))();
 
-module.exports=router
+router.get('/', HomeController.homePage);
+router.use('/menu', menu);
+
+module.exports = router;
