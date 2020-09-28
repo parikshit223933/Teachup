@@ -1,7 +1,14 @@
-:root{
-    font-size:100%;
+:root {
+	font-size: 100%;
 }
-.default-top-padding
-{
-    padding-top: 100px;
+.default-top-padding {
+	padding-top: 100px;
+}
+.ghost-link {
+	text-decoration: none;
+	color: inherit;
+}
+.ghost-link:hover {
+    text-decoration: none;
+    color:black;
 }
