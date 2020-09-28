@@ -1,5 +1,9 @@
+.rise
+{
+    transition: box-shadow ease-in-out 0.1s;
+    width: min-content;
+}
 .rise:hover
 {
     box-shadow: 0px 0px 5px 1px rgb(226, 226, 226);
-    width: min-content;
 }
