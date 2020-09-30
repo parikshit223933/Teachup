@@ -7,9 +7,18 @@
 {
     box-shadow: 0px 0px 5px 1px rgb(226, 226, 226);
 }
-.grad-back
+.teacher-sign-up
 {
-    background-image: url('https://images.unsplash.com/photo-1527176930608-09cb256ab504?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80');
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%238c00ff' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%236f11aa' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23a400ff' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%239b008c' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23ba00ff' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23b4006b' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23ce00ff' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23c00049' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%23e101ff' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23c10028' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%23f30fff' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23b80000' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+    min-height: 100vh;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.student-sign-up
+{
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%23e8ccff' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23d199ff' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23ba66ff' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23a333ff' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%238c00ff' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");;
     min-height: 100vh;
     background-position: bottom;
     background-repeat: no-repeat;
