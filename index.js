@@ -5,6 +5,9 @@ const routes = require('./routes');
 const expressLayouts = require('express-ejs-layouts');
 const path = require('path');
 const sassMiddleware = require('node-sass-middleware');
+const socketServer=require('http').Server(app);
+const socketServerClass=require('./config/socket-server')
+const socketServerInstance=new socketServerClass(socketServer);
 
 app.use(
 	sassMiddleware({
@@ -25,6 +28,7 @@ app.set('layout extractStyles', true);
 app.set('case sensitive routing', false);
 app.set('views', './views');
 
+socketServer.listen(5000)
 app.listen(port, (error) =>
 	error
 		? console.log(`Error in starting the server at port ${port}\n`, error)

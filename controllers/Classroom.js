@@ -1,6 +1,6 @@
 class ClassroomController {
 	renderClassroom = (req, res) => {
-		res.render('main/index.ejs', {layout:false});
+		res.render('main', {layout:false});
 	};
 }
 module.exports = ClassroomController;
