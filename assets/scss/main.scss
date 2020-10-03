@@ -18,5 +18,15 @@ body {
 			border-radius: 100%;
 			background-color: white;
 		}
+		div#streaming
+		{
+			height:100%;
+			width: 80%;
+			.recieved-stream
+			{
+				height:200px;
+				width: auto;
+			}
+		}
 	}
 }

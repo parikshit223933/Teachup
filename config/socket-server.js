@@ -1,12 +1,24 @@
 class socketServer {
 	io;
+
 	constructor(socketServer) {
 		this.io = require('socket.io')(socketServer);
-		this.socket();
+		this.start();
 	}
-	socket = async () => {
+	// |
+	// |
+	// |
+	// |
+	// V
+	start = () => {
 		this.io.sockets.on('connection', function (socket) {
-			console.log('New Connection Made!', socket.id);
+			console.log('New connection made with socket id =', socket.id);
+
+			socket.on('send_stream', function (data) {
+				socket.emit('recieve_stream', {
+					data
+				});
+			});
 
 			socket.on('disconnect', function () {
 				console.log('Socket Disconnected!');
