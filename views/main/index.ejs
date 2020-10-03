@@ -6,26 +6,54 @@
 		<title>Teachup Classroom</title>
 		<link rel="stylesheet" href="/css/main.css" />
 		<!-- WEBCAM -->
-		<script
-			type="text/javascript"
-			src="/js/webcam-easy.js"
-		></script>
+		<script type="text/javascript" src="/js/webcam-easy.js"></script>
+		<!-- BOOTSTRAP -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+			integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+			crossorigin="anonymous"
+		/>
+		<!-- FONT AWESOME -->
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<!-- JQUERY -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
 
 	<body>
-		<div id="screen">
+		<div id="screen" class="position-relative">
 			<!-- <div class="user-profile-pic"></div> -->
+			<%-include('_navbar')%>
 			<div id="streaming">
 				<video id="webcam" autoplay playsinline width="100%" height="100%"></video>
-				<canvas id="canvas" style="display: none;"></canvas>
+				<canvas id="canvas" style="display: none"></canvas>
 				<!-- <audio id="snapSound" src="audio/snap.wav" preload="auto"></audio> -->
 				<div class="recieved-stream">
-					<img id="#streamed-output" height="100%"/>
+					<img id="#streamed-output" height="100%" />
 				</div>
 			</div>
 		</div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
 		<script src="/js/socket-client.js"></script>
+		<!-- BOOTSTRAP -->
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+			integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+			integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+			crossorigin="anonymous"
+		></script>
 	</body>
 </html>
