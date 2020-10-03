@@ -6,9 +6,12 @@ body {
 	background-color: #111111 !important;
 
 	#screen {
-		height: 100%;
+		height: 100vh;
 		width: 100%;
 		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
 		div.user-profile-pic {
 			height: 175px;
 			width: 175px;
@@ -23,86 +26,113 @@ body {
 				width: auto;
 			}
 		}
-	}
-	#navbar {
-		z-index: 100;
-		color: black;
-		background-color: white;
-		height: 100vh;
-		width: 300px;
-		position: absolute;
-		box-shadow: 0px 0px 5px 1px rgb(235, 235, 235);
-		perspective: 10000;
-		transition: transform ease-in-out 0.2s;
-		transform-origin: left;
-		cursor: pointer;
-		transform: rotateY(90deg);
+		#navbar {
+			z-index: 100;
+			color: black;
+			background-color: white;
+			height: 100vh;
+			width: 300px;
+			left: 0px;
+			position: absolute;
+			box-shadow: 0px 0px 5px 1px rgb(235, 235, 235);
+			perspective: 10000;
+			transition: transform ease-in-out 0.2s;
+			transform-origin: left;
+			cursor: pointer;
+			transform: rotateY(90deg);
 
-		div {
-			display: flex;
-			flex-direction: row;
-			justify-content: flex-start;
-			align-items: center;
-			transition: background-color ease-in-out 0.1s;
-			&:hover {
-				background-color: rgb(235, 235, 235);
+			div {
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				align-items: center;
+				transition: background-color ease-in-out 0.1s;
+				&:hover {
+					background-color: rgb(235, 235, 235);
+				}
 			}
 		}
-	}
-	#navbar-messages {
-		z-index: 100;
-		color: black;
-		background-color: white;
-		height: 100vh;
-		width: 300px;
-		position: absolute;
-		box-shadow: 0px 0px 5px 1px rgb(235, 235, 235);
-		perspective: 10000;
-		right:0px;
-		transition: transform ease-in-out 0.2s;
-		transform-origin: right;
-		cursor: pointer;
-		transform: rotateY(90deg);
-		overflow-y: scroll;
-		div {
+		#navbar-messages {
+			z-index: 100;
+			color: black;
+			background-color: white;
+			height: 100vh;
+			width: 300px;
+			position: absolute;
+			box-shadow: 0px 0px 5px 1px rgb(235, 235, 235);
+			perspective: 10000;
+			right: 0px;
+			transition: transform ease-in-out 0.2s;
+			transform-origin: right;
+			cursor: pointer;
+			transform: rotateY(90deg);
+			overflow-y: scroll;
+			div {
+				display: flex;
+				flex-direction: row;
+				justify-content: flex-start;
+				align-items: center;
+				transition: background-color ease-in-out 0.1s;
+				&:hover {
+					background-color: rgb(235, 235, 235);
+				}
+				img {
+					height: 40px;
+					width: 40px;
+					border-radius: 100%;
+					margin-right: 15px;
+				}
+			}
+		}
+		#open-nav {
+			z-index: 99;
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			border-radius: 100%;
+			top: 17px;
+			left: 15px;
+			background-color: rgba($color: white, $alpha: 0.1);
+			color: white;
+		}
+		#open-messages {
+			z-index: 99;
+			width: 50px;
+			height: 50px;
+			position: absolute;
+			border-radius: 100%;
+			top: 17px;
+			right: 15px;
+			background-color: rgba($color: white, $alpha: 0.1);
+			color: white;
+		}
+		#bottom-controls {
+			z-index: 98;
+			position: absolute;
+			bottom: 0px;
+			background-image: linear-gradient(0deg, white -670%, transparent 105%);
+			width: 100%;
+			height: 100px;
 			display: flex;
 			flex-direction: row;
-			justify-content: flex-start;
+			justify-content: center;
 			align-items: center;
-			transition: background-color ease-in-out 0.1s;
-			&:hover {
-				background-color: rgb(235, 235, 235);
-			}
-			img
-			{
-				height:40px;
-				width: 40px;
+			div {
+				height: 70px;
+				width: 70px;
 				border-radius: 100%;
-				margin-right:15px;
+				font-size: 30px;
+				&:nth-child(2n + 1) {
+					background-color: #d93025;
+					box-shadow: 0px 0px 1px 1px rgb(252, 61, 61);
+					color: white;
+				}
+				&:nth-child(2n) {
+					background-color: white;
+					box-shadow: 0px 0px 1px 1px rgb(238, 238, 238);
+				}
 			}
 		}
-	}
-	#open-nav {
-		z-index: 99;
-		width: 50px;
-		height: 50px;
-		position: absolute;
-		border-radius: 100%;
-		top: 17px;
-		left: 15px;
-		background-color: rgba($color: white, $alpha: 0.1);
-		color: white;
-	}
-	#open-messages {
-		z-index: 99;
-		width: 50px;
-		height: 50px;
-		position: absolute;
-		border-radius: 100%;
-		top: 17px;
-		right: 15px;
-		background-color: rgba($color: white, $alpha: 0.1);
-		color: white;
 	}
 }
 .show-navbar {
