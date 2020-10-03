@@ -28,8 +28,7 @@ app.set('layout extractStyles', true);
 app.set('case sensitive routing', false);
 app.set('views', './views');
 
-socketServer.listen(5000)
-app.listen(port, (error) =>
+socketServer.listen(port, (error) =>
 	error
 		? console.log(`Error in starting the server at port ${port}\n`, error)
 		: console.log(`Server is running at port ${port}`)
