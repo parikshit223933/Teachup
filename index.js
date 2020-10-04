@@ -5,10 +5,32 @@ const routes = require('./routes');
 const expressLayouts = require('express-ejs-layouts');
 const path = require('path');
 const sassMiddleware = require('node-sass-middleware');
-const socketServer=require('http').Server(app);
-const socketServerClass=require('./config/socket-server')
-const socketServerInstance=new socketServerClass(socketServer);
+const socketServer = require('http').Server(app);
+const socketServerClass = require('./config/socket-server');
+const socketServerInstance = new socketServerClass(socketServer);
+const session = require('express-session');
+const mongoStore = require('connect-mongo')(session);
+const db = require('./config/mongoose');
 
+app.use(
+	session({
+		name: 'Teachup',
+		secret: 'SOMETHING',
+		resave: false,
+		saveUninitialized: false,
+		cookie: { maxAge: 1000 * 60 * 60 * 6 },
+		store: new mongoStore(
+			{
+				mongooseConnection: db,
+				autoRemove: 'disabled',
+			},
+			function (error) {
+				console.log(error || 'Connect-Mongo setup is working fine!');
+			}
+		),
+	})
+);
+// SASS MIDDLEWARE
 app.use(
 	sassMiddleware({
 		src: path.join(__dirname, './assets/scss'),
