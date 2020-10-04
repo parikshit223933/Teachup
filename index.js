@@ -11,7 +11,8 @@ const socketServerInstance = new socketServerClass(socketServer);
 const session = require('express-session');
 const mongoStore = require('connect-mongo')(session);
 const db = require('./config/mongoose');
-const bodyParser=require('body-parser');
+const bodyParser = require('body-parser');
+const chalk = require('chalk');
 
 app.use(
 	session({
@@ -20,15 +21,10 @@ app.use(
 		resave: false,
 		saveUninitialized: false,
 		cookie: { maxAge: 1000 * 60 * 60 * 6 },
-		store: new mongoStore(
-			{
-				mongooseConnection: db,
-				autoRemove: 'disabled',
-			},
-			function (error) {
-				console.log(error || 'Connect-Mongo setup is working fine!');
-			}
-		),
+		store: new mongoStore({
+			mongooseConnection: db,
+			autoRemove: 'disabled',
+		}),
 	})
 );
 // SASS MIDDLEWARE
@@ -42,9 +38,9 @@ app.use(
 	})
 );
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }));
 // parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 app.use(expressLayouts);
 app.use('/', routes);
 app.use(express.static(path.join(__dirname, 'assets')));
@@ -57,6 +53,6 @@ app.set('views', './views');
 
 socketServer.listen(port, (error) =>
 	error
-		? console.log(`Error in starting the server at port ${port}\n`, error)
-		: console.log(`Server is running at port ${port}`)
+		? console.log(chalk.redBright(`Error in starting the server at port ${port}\n`), error)
+		: console.log(chalk.blueBright(`Server is running at port ${port}`))
 );
