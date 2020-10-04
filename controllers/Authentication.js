@@ -1,22 +1,14 @@
 class Authentication {
-	signIn = (req, res) => {
-		res.render('authentication/sign-in');
-	};
+	// FOR SIGN UP
 	signUp = (req, res) => {
-		res.render('authentication/sign-up');
+        console.log(req.body);
+		res.redirect('back');
 	};
 
-	teacherSignUp = (req, res) => {
-		res.render('authentication/sign-up/teacher');
-	};
-	StudentSignUp = (req, res) => {
-		res.render('authentication/sign-up/student');
-	};
-	teacherSignIn = (req, res) => {
-		res.render('authentication/sign-in/teacher');
-	};
-	StudentSignIn = (req, res) => {
-		res.render('authentication/sign-in/student');
+	//FOR SIGN IN
+	signIn = (req, res) => {
+		res.redirect('back')
 	};
 }
+
 module.exports = Authentication;

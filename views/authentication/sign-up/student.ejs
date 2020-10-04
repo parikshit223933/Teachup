@@ -21,10 +21,26 @@
 					<div class="container">
 						<div class="row">
 							<div class="col-md-10 offset-md-1">
-								<form>
+								<form
+									action="/auth/sign-up/authenticate-user"
+									enctype="multipart/form-data"
+									method="POST"
+								>
+									<input
+										type="text"
+										name="type"
+										value="student"
+										disabled
+										hidden
+									/>
 									<div class="form-group my-4">
 										<label for="namefield"><b>Name</b></label>
-										<input type="text" class="form-control" id="namefield" />
+										<input
+											type="text"
+											name="name"
+											class="form-control"
+											id="namefield"
+										/>
 									</div>
 									<div class="form-group my-4">
 										<label for="emailfield"><b>Email address</b></label>
@@ -33,6 +49,7 @@
 											class="form-control"
 											id="emailfield"
 											aria-describedby="emailHelp"
+											name="email"
 										/>
 										<small id="emailHelp" class="form-text text-muted"
 											>We'll never share your email with anyone else.</small
@@ -102,6 +119,7 @@
 													type="text"
 													class="form-control"
 													placeholder="State"
+													name="state"
 												/>
 											</div>
 											<div class="col">
@@ -109,6 +127,7 @@
 													type="text"
 													class="form-control"
 													placeholder="City"
+													name="city"
 												/>
 											</div>
 											<div class="col">
@@ -116,6 +135,7 @@
 													type="number"
 													class="form-control"
 													placeholder="Postal Code"
+													name="postalCode"
 												/>
 											</div>
 										</div>
@@ -147,6 +167,7 @@
 													class="custom-file-input"
 													id="inputGroupFile01"
 													aria-describedby="inputGroupFileAddon01"
+													name="avatar"
 												/>
 												<label
 													class="custom-file-label"
@@ -162,7 +183,12 @@
 									</div>
 									<div class="form-group my-4">
 										<label for="DOBField"><b>Date of Birth</b></label>
-										<input type="date" class="form-control" id="DOBField" />
+										<input
+											type="date"
+											name="dob"
+											class="form-control"
+											id="DOBField"
+										/>
 									</div>
 
 									<div class="form-group my-4">
@@ -180,6 +206,7 @@
 														>
 													</div>
 													<input
+														name="primaryContact"
 														type="text"
 														class="form-control"
 														placeholder="Primary"
@@ -198,6 +225,7 @@
 														>
 													</div>
 													<input
+														name="secondaryContact"
 														type="text"
 														class="form-control"
 														placeholder="Secondary"
@@ -215,6 +243,7 @@
 											type="password"
 											class="form-control"
 											id="passwordfield"
+											name="password"
 										/>
 									</div>
 									<div class="form-group my-4">
@@ -222,6 +251,7 @@
 											><b>Confirm Password</b></label
 										>
 										<input
+											name="confirmPassword"
 											type="password"
 											class="form-control"
 											id="confirmpasswordfield"

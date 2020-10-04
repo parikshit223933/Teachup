@@ -11,6 +11,7 @@ const socketServerInstance = new socketServerClass(socketServer);
 const session = require('express-session');
 const mongoStore = require('connect-mongo')(session);
 const db = require('./config/mongoose');
+const bodyParser=require('body-parser');
 
 app.use(
 	session({
@@ -40,6 +41,10 @@ app.use(
 		prefix: '/css', // Where prefix is at <link rel="stylesheets" href="prefix/style.css"/>
 	})
 );
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+// parse application/json
+app.use(bodyParser.json())
 app.use(expressLayouts);
 app.use('/', routes);
 app.use(express.static(path.join(__dirname, 'assets')));
