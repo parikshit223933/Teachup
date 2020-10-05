@@ -5,8 +5,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Teachup Classroom</title>
 		<link rel="stylesheet" href="/css/main.css" />
-		<!-- WEBCAM -->
-		<script type="text/javascript" src="/js/webcam-easy.js"></script>
 		<!-- BOOTSTRAP -->
 		<link
 			rel="stylesheet"
@@ -28,18 +26,7 @@
 			<!-- <div class="user-profile-pic"></div> -->
 			<%-include('_navbar')%>
 			<div id="streaming" class="text-light">
-				<h1>Uploaded Stream</h1>
-				<div>
-					<video id="webcam" autoplay playsinline width="200px" height="200px"></video>
-					<canvas id="canvas" style="display: none"></canvas>
-					<!-- <audio id="snapSound" src="audio/snap.wav" preload="auto"></audio> -->
-				</div>
-				<h1>Recieved Stream</h1>
-				<div>
-					<div class="recieved-stream">
-						<img id="#streamed-output" height="200px" width="200px" />
-					</div>
-				</div>
+				
 			</div>
 			<div id="bottom-controls">
 				<div class="mx-3 d-flex flex-row justify-content-center align-items-center">
@@ -55,7 +42,6 @@
 		</div>
 
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
-		<script src="/js/socket-client.js"></script>
 		<!-- BOOTSTRAP -->
 		<script
 			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

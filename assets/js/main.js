@@ -1,5 +1,4 @@
 $('#screen').on('mousemove', () => {
-	console.log('hola');
 	$('#bottom-controls').addClass('show-bottom-controls');
 });
 $('#screen').on('mouseleave', () => {
