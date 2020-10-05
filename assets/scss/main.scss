@@ -11,6 +11,7 @@ body {
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
+		transition: display ease-in-out 0.2s;
 		align-items: center;
 		div.user-profile-pic {
 			height: 175px;
@@ -105,37 +106,6 @@ body {
 			right: 15px;
 			background-color: rgba($color: white, $alpha: 0.1);
 			color: white;
-		}
-		#bottom-controls {
-			z-index: 98;
-			position: absolute;
-			bottom: 0px;
-			background-image: linear-gradient(0deg, white -670%, transparent 105%);
-			width: 100%;
-			height: 100px;
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: center;
-			transform-origin: bottom;
-			transform: rotateX(90deg);
-			transition: transform ease-in-out 0.2s;
-			div {
-				height: 70px;
-				width: 70px;
-				border-radius: 100%;
-				cursor: pointer;
-				font-size: 30px;
-				&:nth-child(2n + 1) {
-					background-color: #d93025;
-					box-shadow: 0px 0px 1px 1px rgb(252, 61, 61);
-					color: white;
-				}
-				&:nth-child(2n) {
-					background-color: white;
-					box-shadow: 0px 0px 1px 1px rgb(238, 238, 238);
-				}
-			}
 		}
 	}
 }

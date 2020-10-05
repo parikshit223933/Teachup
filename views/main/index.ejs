@@ -25,22 +25,10 @@
 		<div id="screen" class="position-relative">
 			<!-- <div class="user-profile-pic"></div> -->
 			<%-include('_navbar')%>
-			<div id="streaming" class="text-light">
-				
-			</div>
-			<div id="bottom-controls">
-				<div class="mx-3 d-flex flex-row justify-content-center align-items-center">
-					<i class="fa fa-microphone-slash" aria-hidden="true"></i>
-				</div>
-				<div class="mx-3 d-flex flex-row justify-content-center align-items-center">
-					<i class="fa fa-phone" aria-hidden="true"></i>
-				</div>
-				<div class="mx-3 d-flex flex-row justify-content-center align-items-center">
-					<i class="fa fa-video-camera" aria-hidden="true"></i>
-				</div>
-			</div>
+			<div id="streaming" class="text-light"></div>
 		</div>
 
+		<!-- SOCKET IO -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
 		<!-- BOOTSTRAP -->
 		<script
@@ -58,6 +46,9 @@
 			integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
 			crossorigin="anonymous"
 		></script>
+		<!-- JITSI MEET -->
+		<script src="/js/jitsi-interface-config-overwrite.js"></script>
+		<script src="https://meet.jit.si/external_api.js"></script>
 		<!-- CUSTOM SCRIPT -->
 		<script src="/js/main.js"></script>
 	</body>
